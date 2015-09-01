@@ -1,0 +1,55 @@
+# -*- encoding: utf-8 -*-
+
+<openerp>
+<data>
+
+<!-- Main Menu Info --> 
+<record id="view_daily_transaction" model="ir.ui.view"> 
+		<field name="name">daily.transaction.tree</field>
+		<field name="model">daily.transaction</field> 
+		<field name="arch" type="xml">
+		
+		<tree string="Daily Transaction"> 
+		<form string="Daily Transaction" version="7.0">
+		
+			<field name="name"/>
+			<field name="date"/>
+			<field name="type"/> 
+			<field name="amount"/>
+		
+		</tree>
+		</field>
+		</record> 
+		
+
+<!-- Sub Menu Info --> 
+
+<record id="view_daily_transaction" model="ir.ui.view"> 
+		<field name="name">daily.transaction.tree</field>
+		<field name="model">daily.transaction</field> 
+		<field name="arch" type="xml">
+		
+		<tree string="Daily Transaction"> 
+		<form string="Daily Transaction" version="7.0">
+		<group>
+			<field name="name"/>
+			<field name="date"/>
+			<field name="type"/> 
+			<field name="amount"/>
+		</group> 
+		</tree>
+		</field>
+		</record> 
+
+<!-- Action Menu info --> 
+<record id="action_daily_transaction" model="ir.actions.act_wndow">
+	<field name="name">Daily Transaction</field> 
+	<field name="res_model">daily.transaction</field>
+	<field name="view_type">form</field>
+	<field name="view_mode">tree,form</field>
+	
+	<field name="search_view_id" eval="False"/> 
+	<field name="help"> Create new daily transaction.</field>
+</record> 
+</data>
+</openerp>
